@@ -2,6 +2,27 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from PIL import Image, ImageTk
 
+# --- GUI Setup ---
+root = tk.Tk()
+root.title("Image Resizer")
+root.geometry("400x400")
+root.resizable(False, False)
+
+# --- Title Section with Image and Text ---
+title_frame = tk.Frame(root)
+title_frame.pack(pady=10)
+
+icon_image = Image.open("alienspfp_36x36.png")
+icon_tk = ImageTk.PhotoImage(icon_image)
+
+icon_label = tk.Label(title_frame, image=icon_tk)
+icon_label.image = icon_tk  # keep reference
+icon_label.pack(side="left", padx=5)
+
+title_label = tk.Label(title_frame, text="Image Resizer", font=("Arial", 14, "bold"))
+title_label.pack(side="left", padx=5)
+
+# --- Functions ---
 def upload_image():
     global img, img_path
     file_path = filedialog.askopenfilename(
@@ -43,14 +64,7 @@ def resize_image():
 
     messagebox.showinfo("Success", f"Image resized and saved to:\n{output_path}")
 
-# --- GUI Setup ---
-root = tk.Tk()
-root.title("Image Resizer")
-root.geometry("400x400")
-root.resizable(False, False)
-
-tk.Label(root, text="🖼️ Simple Image Resizer", font=("Arial", 14, "bold")).pack(pady=10)
-
+# --- Buttons and UI Layout ---
 upload_btn = tk.Button(root, text="Upload Image", command=upload_image, width=20, bg="#4CAF50", fg="white")
 upload_btn.pack(pady=10)
 
