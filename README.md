@@ -16,7 +16,7 @@ venv\Scripts\activate   # On Windows
 # source venv/bin/activate   # On macOS/Linux
 
  3. Install required dependencies
-pip install pillow tk
+pip install pillow and tk
 
  4. Run the Image Resizer script
 python img-resize.py
