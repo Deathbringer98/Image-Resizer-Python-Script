@@ -13,7 +13,7 @@ cd "file location"
  2. (Optional) Create a virtual environment
 python -m venv venv
 venv\Scripts\activate   # On Windows
-# source venv/bin/activate   # On macOS/Linux
+ source venv/bin/activate   # On macOS/Linux
 
  3. Install required dependencies
 pip install pillow tk
