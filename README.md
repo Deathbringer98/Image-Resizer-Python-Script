@@ -1,4 +1,4 @@
-🖼️ Image Resizer — Python GUI App
+🖼️ Image Resizer Python GUI App
 
 A lightweight Python desktop tool that allows you to quickly resize any image with a simple and intuitive user interface. Built with Tkinter and Pillow (PIL).
 
